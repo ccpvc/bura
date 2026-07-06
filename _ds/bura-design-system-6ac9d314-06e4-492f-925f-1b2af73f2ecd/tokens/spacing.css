@@ -1,0 +1,26 @@
+/* BURA — Tokens de espaciado y layout
+ * Base 4px. Layout del sitio 2018: bandas full-width, contenedor ~1100px.
+ */
+:root {
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Ritmo de bandas de sección */
+  --band-y:    var(--space-16);
+  --band-y-lg: var(--space-20);
+
+  /* Anchos */
+  --container:     1100px;
+  --measure-prose: 66ch;
+  --gutter:        clamp(20px, 4vw, 48px); /* @kind spacing */
+}

@@ -1,0 +1,36 @@
+/* BURA — Efectos: radios, bordes, sombras duras, motivos, movimiento
+ * Formas rectas y duras. Radio 0. Sombras sólidas desplazadas (sticker),
+ * nunca difusas. Motivos: semitono de puntos, marcos apilados, cinta diagonal.
+ */
+:root {
+  /* ---- Radios: la marca es RECTA ---- */
+  --radius-none: 0px;
+  --radius-pill: 999px; /* solo excepciones deliberadas */
+
+  /* ---- Bordes: negros y francos ---- */
+  --bw-hair: 1px; /* @kind other */
+  --bw-mid:  2px; /* @kind other */
+  --bw-bold: 4px; /* @kind other */
+
+  /* ---- Sombras duras (offset sólido, sin blur) ---- */
+  --shadow-stack:    4px 4px 0 var(--bura-white), 5px 5px 0 var(--tierra-900); /* hoja apilada */
+  --shadow-stack-2:  4px 4px 0 var(--bura-white), 5px 5px 0 var(--tierra-900), 9px 9px 0 var(--bura-white), 10px 10px 0 var(--tierra-900); /* doble hoja */
+  --shadow-hard:     4px 4px 0 var(--tierra-900);
+  --shadow-hard-sm:  2px 2px 0 var(--tierra-900);
+  --shadow-ribbon:   6px 6px 0 rgba(0, 0, 0, 0.18);
+
+  /* ---- Semitono (puntos) — usar como background-image ---- */
+  --dots: radial-gradient(var(--tierra-900) 1.6px, transparent 1.7px); /* @kind other */
+  --dots-size: 14px 14px; /* @kind other */
+  --dots-lg: radial-gradient(var(--tierra-900) 3px, transparent 3.2px); /* @kind other */
+  --dots-lg-size: 26px 26px; /* @kind other */
+
+  /* Granos de maíz — resignificación del semitono */
+  --granos: radial-gradient(var(--maiz-500) 3px, transparent 3.2px); /* @kind other */
+  --granos-size: 22px 22px; /* @kind other */
+
+  /* ---- Movimiento: cortes secos, sin bounce ---- */
+  --ease-out:  cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --dur-fast:  100ms; /* @kind other */
+  --dur-base:  180ms; /* @kind other */
+}

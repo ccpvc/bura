@@ -1,0 +1,94 @@
+/* BURA — Tokens de color (concepto MAÍZ, v3)
+ * BURA = maíz / alimento en lengua nativa merideña prehispánica.
+ * El amarillo fluorescente (#FFFA2A) se retira del sistema — queda solo en el
+ * logo histórico. El DORADO MAÍZ (#E0C314, documentado en el manual FICAIJ)
+ * es el acento vivo; tierra, hoja seca y tallo completan el campo.
+ * Solo colores documentados de la marca. Tintes al 90/60/30/10.
+ */
+:root {
+  /* ---- Histórico (solo para el logo y el archivo 2018) ---- */
+  --bura-yellow:      #FFFA2A;
+  --bura-yellow-soft: #FFFDBF;
+  --bura-black:       #000000;
+  --bura-white:       #FFFFFF;
+
+  /* ---- Maíz (grano) — acento primario ---- */
+  --maiz-500: #E0C314;   /* grano — dorado FICAIJ documentado */
+  --maiz-600: #B59D0E;   /* grano tostado (hover / texto sobre claro) */
+  --maiz-700: #8A770B;
+  --maiz-60:  #ECDB72;   /* tinte 60% */
+  --maiz-30:  #F6EDB9;   /* tinte 30% */
+  --maiz-10:  #FCF9E8;   /* tinte 10% */
+
+  /* ---- Tierra y campo ---- */
+  --tierra-900: #1A1602;  /* tinta/tierra FICAIJ — reemplaza al negro puro en texto */
+
+  /* ---- Grises (sitio 2018) ---- */
+  --gray-band:  #E4E4E4;
+  --gray-100:   #F4F4F4;
+  --gray-300:   #D6D6D6;
+  --gray-500:   #8A8A8A;
+  --gray-700:   #4B4B4B;
+
+  /* ---- Paleta FICAIJ (manual 2020) — el campo ---- */
+  --fest-gold:   #E0C314;  /* = maíz-500 */
+  --fest-ink:    #1A1602;
+  --fest-orange: #E55812;
+  --fest-teal:   #0B7A75;
+  --fest-mint:   #A6EBC9;
+  --fest-olive:  #605C48;  /* tallo */
+  --fest-gray:   #918D79;  /* hoja */
+  --fest-sand:   #DBD7C3;  /* hoja seca */
+
+  /* Tintes funcionales (regla 90/60/30/10) */
+  --fest-teal-10:   #E7F2F1;
+  --fest-orange-10: #FCEEE7;
+  --fest-mint-30:   #E4F9EF;
+  --fest-sand-30:   #F4F3EC;
+
+  /* ================= ALIAS SEMÁNTICOS ================= */
+
+  /* Texto — tierra en lugar de negro puro (más orgánico) */
+  --text-strong:       var(--tierra-900);
+  --text-body:         #4A4536;   /* tierra media — mezcla gris 2018 × oliva */
+  --text-muted:        var(--fest-gray);
+  --text-invert:       var(--bura-white);
+  --text-invert-muted: rgba(255, 255, 255, 0.72);
+  --text-on-yellow:    var(--tierra-900);
+  --text-accent:       var(--maiz-700);
+
+  /* Superficies (planas, nunca degradados) */
+  --surface-page:   var(--bura-white);
+  --surface-band:   #F4F3EC;             /* hoja seca 30% — banda cálida por defecto */
+  --surface-warm:   var(--fest-sand);    /* hoja seca plena */
+  --surface-maiz:   var(--maiz-500);     /* momento pop */
+  --surface-yellow: var(--bura-yellow);   /* alias histórico — solo archivo 2018 */
+  --surface-soft:   var(--maiz-10);
+  --surface-ink:    var(--tierra-900);
+
+  /* Acento */
+  --accent:          var(--maiz-500);
+  --accent-strong:   var(--maiz-600);
+  --accent-contrast: var(--tierra-900);
+
+  /* ---- Las 5 áreas CORE (el campo con roles propios) ---- */
+  --area-investigacion: var(--fest-teal);
+  --area-formacion:     var(--fest-mint);
+  --area-asesoria:      var(--fest-olive);
+  --area-produccion:    var(--fest-orange);
+  --area-exhibicion:    var(--maiz-500);
+
+  /* Bordes — tierra, no negro puro */
+  --border:      var(--tierra-900);
+  --border-soft: #DAD6C8;
+
+  /* Feedback */
+  --positive:      var(--fest-teal);
+  --positive-soft: var(--fest-mint-30);
+  --warning:       var(--maiz-600);
+  --danger:        var(--fest-orange);
+  --danger-soft:   var(--fest-orange-10);
+
+  /* Foco */
+  --focus-ring: var(--maiz-600);
+}

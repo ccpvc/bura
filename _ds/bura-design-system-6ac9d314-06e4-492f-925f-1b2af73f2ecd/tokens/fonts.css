@@ -1,0 +1,7 @@
+/* BURA — Webfonts (evolución 2026)
+ * Nueva voz tipográfica contemporánea (decisión jul 2026):
+ *  - Archivo Black / Archivo → display y titulares (heredera del gesto en bloque del logo)
+ *  - Hanken Grotesk → cuerpo y UI (grotesca cálida y legible)
+ * El logo (Walibi0615) NUNCA se recompone en texto: usar assets/logo/*.png.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@500;600;700;800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
