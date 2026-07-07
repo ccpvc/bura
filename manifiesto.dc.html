@@ -19,6 +19,10 @@
     body { margin: 0; background: #FFFFFF; color: #4A4536; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
     a { color: #1A1602; }
     a:hover { color: #8A770B; }
+    body { overflow-x: hidden; }
+    @media (max-width: 560px) {
+      [data-mq="num"] { grid-template-columns: 52px 1fr !important; gap: 14px !important; }
+    }
   </style>
 </helmet>
 
@@ -46,27 +50,27 @@
   <section data-screen-label="Principios" style="background: #FFFFFF">
     <div style="max-width: 900px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 36px">
 
-      <div style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
+      <div data-mq="num" style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
         <span style="font-family: 'Archivo Black', 'Archivo', sans-serif; font-size: 32px; color: #1A1602; background: #E0C314; text-align: center; padding: 6px 0; border: 3px solid #1A1602">1</span>
         <p style="margin: 0; font-size: 18px; line-height: 1.65"><strong style="color: #1A1602">La voz de niños, adolescentes y jóvenes</strong>, alentando su desarrollo como individuos y ciudadanos íntegros, con ideas, opinión y pensamientos propios.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
+      <div data-mq="num" style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
         <span style="font-family: 'Archivo Black', 'Archivo', sans-serif; font-size: 32px; color: #1A1602; background: #E0C314; text-align: center; padding: 6px 0; border: 3px solid #1A1602">2</span>
         <p style="margin: 0; font-size: 18px; line-height: 1.65"><strong style="color: #1A1602">La prominencia del diálogo y la democracia</strong> como fuentes de resolución de conflictos y para evitar la guerra.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
+      <div data-mq="num" style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
         <span style="font-family: 'Archivo Black', 'Archivo', sans-serif; font-size: 32px; color: #1A1602; background: #E0C314; text-align: center; padding: 6px 0; border: 3px solid #1A1602">3</span>
         <p style="margin: 0; font-size: 18px; line-height: 1.65"><strong style="color: #1A1602">El desarrollo de la creatividad y el compromiso</strong> de niños, adolescentes y jóvenes en las actividades y sendas que deciden tomar.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
+      <div data-mq="num" style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
         <span style="font-family: 'Archivo Black', 'Archivo', sans-serif; font-size: 32px; color: #1A1602; background: #E0C314; text-align: center; padding: 6px 0; border: 3px solid #1A1602">4</span>
         <p style="margin: 0; font-size: 18px; line-height: 1.65"><strong style="color: #1A1602">El reconocimiento y el respeto a las diversidades</strong> y a las visiones plurales e inclusivas de los pueblos del mundo. La comprensión, tolerancia y amistad entre los pueblos, paz y fraternidad universal (Artículo 10 de la Convención).</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
+      <div data-mq="num" style="display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start">
         <span style="font-family: 'Archivo Black', 'Archivo', sans-serif; font-size: 32px; color: #1A1602; background: #E0C314; text-align: center; padding: 6px 0; border: 3px solid #1A1602">5</span>
         <div style="display: flex; flex-direction: column; gap: 16px">
           <p style="margin: 0; font-size: 18px; line-height: 1.65"><strong style="color: #1A1602">El acceso igualitario</strong> de niños, adolescentes y jóvenes a:</p>

@@ -20,6 +20,19 @@
     body { margin: 0; background: #FFFFFF; color: #4A4536; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
     a { color: #1A1602; }
     a:hover { color: #8A770B; }
+    body { overflow-x: hidden; }
+    @media (max-width: 880px) {
+      [data-mq="cols2"] { grid-template-columns: 1fr !important; gap: 32px !important; }
+      [data-mq="cols3"] { grid-template-columns: 1fr 1fr !important; }
+      [data-mq="stats"] { grid-template-columns: 1fr 1fr !important; gap: 24px !important; }
+      [data-mq="galeria"] { grid-template-columns: 1fr 1fr !important; }
+      [data-mq="headbar"] { height: auto !important; flex-wrap: wrap !important; padding: 12px 16px !important; gap: 10px !important; justify-content: center !important; }
+      [data-mq="nav"] { flex-wrap: wrap !important; gap: 14px !important; justify-content: center !important; }
+      [data-mq2="pad"] { padding-top: 56px !important; padding-bottom: 56px !important; }
+    }
+    @media (max-width: 560px) {
+      [data-mq="cols3"] { grid-template-columns: 1fr !important; }
+    }
   </style>
 </helmet>
 
@@ -27,11 +40,11 @@
 
   <!-- ======================= HEADER ======================= -->
   <header data-screen-label="Header" style="position: sticky; top: 0; z-index: 50; background: #FFFFFF; border-bottom: 3px solid #1A1602">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+    <div data-mq="headbar" style="max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
       <a href="#inicio" style="display: flex; align-items: center; gap: 12px; text-decoration: none">
         <img src="assets/bura-logo-maiz.png" alt="BURA" style="height: 46px; display: block">
       </a>
-      <nav style="display: flex; align-items: center; gap: 28px">
+      <nav data-mq="nav" style="display: flex; align-items: center; gap: 28px">
         <a href="#somos" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none">Somos</a>
         <a href="#areas" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none">Qué hacemos</a>
         <a href="#ficaij" style="font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none">FICAIJ</a>
@@ -43,7 +56,7 @@
 
   <!-- ======================= HERO ======================= -->
   <section id="inicio" data-screen-label="Hero" style="background: #E0C314; border-bottom: 3px solid #1A1602; overflow: hidden">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 72px 24px 80px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center">
+    <div data-mq="cols2" data-mq2="pad" style="max-width: 1100px; margin: 0 auto; padding: 72px 24px 80px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center">
       <div style="display: flex; flex-direction: column; gap: 24px">
         <div style="display: flex">
           <span style="background: #1A1602; color: #FFFFFF; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px">Plataforma de innovación colaborativa · Mérida — Bogotá</span>
@@ -66,7 +79,7 @@
   <section id="somos" data-screen-label="Somos" style="background: #FFFFFF">
     <div style="max-width: 1100px; margin: 0 auto; padding: 88px 24px">
       <x-import component-from-global-scope="BURADesignSystem_6ac9d3.SectionHeader" title="Somos" kicker="Desde 2010" hint-size="100%,90px"></x-import>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 48px">
+      <div data-mq="cols2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; margin-top: 48px">
         <div style="display: flex; flex-direction: column; gap: 20px">
           <p style="margin: 0; font-size: 20px; line-height: 1.6; color: #1A1602; font-weight: 600">Somos una Plataforma de Innovación Colaborativa para la Resolución de Problemas Sociocomunitarios.</p>
           <p style="margin: 0; font-size: 17px; line-height: 1.65">No somos una agencia tradicional: somos una <strong>infraestructura de cambio social</strong>. Investigamos problemas reales, activamos capacidades, creamos contenidos y tecnologías con propósito, y amplificamos las voces y soluciones que importan.</p>
@@ -111,7 +124,7 @@
 
   <!-- ======================= CIFRAS ======================= -->
   <section data-screen-label="Cifras" style="background: #F4F3EC; border-top: 3px solid #1A1602; border-bottom: 3px solid #1A1602">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px">
+    <div data-mq="stats" style="max-width: 1100px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px">
       <x-import component-from-global-scope="BURADesignSystem_6ac9d3.Stat" value="+50 mil" label="personas alcanzadas" highlight="{{ true }}" hint-size="100%,110px"></x-import>
       <x-import component-from-global-scope="BURADesignSystem_6ac9d3.Stat" value="+125" label="eventos realizados" hint-size="100%,110px"></x-import>
       <x-import component-from-global-scope="BURADesignSystem_6ac9d3.Stat" value="1.437" label="audiovisuales de +80 países" hint-size="100%,110px"></x-import>
@@ -124,7 +137,7 @@
     <div style="max-width: 1100px; margin: 0 auto; padding: 88px 24px">
       <x-import component-from-global-scope="BURADesignSystem_6ac9d3.SectionHeader" title="Qué hacemos" kicker="5 áreas CORE" hint-size="100%,90px"></x-import>
       <p style="margin: 20px auto 0; max-width: 62ch; text-align: center; font-size: 17px; line-height: 1.65">Cinco áreas de trabajo que se siembran juntas: investigamos, formamos, acompañamos, producimos y exhibimos — siempre con las comunidades como protagonistas.</p>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px">
+      <div data-mq="cols3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px">
         <div style="border: 3px solid #1A1602; background: #FFFFFF; display: flex; flex-direction: column">
           <div style="height: 10px; background: #0B7A75"></div>
           <div style="padding: 24px; display: flex; flex-direction: column; gap: 10px">
@@ -170,7 +183,7 @@
 
   <!-- ======================= FICAIJ ======================= -->
   <section id="ficaij" data-screen-label="FICAIJ" style="background: #1A1602; border-top: 3px solid #1A1602">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center">
+    <div data-mq="cols2" data-mq2="pad" style="max-width: 1100px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
         <img src="uploads/III%20FICAIJ%201.JPG" alt="Tres participantes con camisetas del festival" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border: 3px solid #FFFFFF">
         <img src="uploads/IMG_3438.JPG" alt="Niños y niñas sonriendo sentados en el piso" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border: 3px solid #FFFFFF; margin-top: 28px">
@@ -192,7 +205,7 @@
     <div style="max-width: 1100px; margin: 0 auto; padding: 88px 24px">
       <x-import component-from-global-scope="BURADesignSystem_6ac9d3.SectionHeader" title="Galería" kicker="Memoria viva" hint-size="100%,90px"></x-import>
       <sc-if value="{{ mostrarGaleria }}" hint-placeholder-val="{{ true }}">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px">
+        <div data-mq="galeria" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px">
           <img src="uploads/944476_530316063682000_1754248541_n.jpg" alt="Equipo y jurados del festival" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 3px solid #1A1602">
           <img src="uploads/II%20FICAIJ%204.jpg" alt="Niña frente a maqueta de animación" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 3px solid #1A1602">
           <img src="uploads/II%20FICAIJ%205.jpg" alt="Set de stop motion con figuras de plastilina" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 3px solid #1A1602">
@@ -225,7 +238,6 @@
       <x-import component-from-global-scope="BURADesignSystem_6ac9d3.Ribbon" angle="{{ -2 }}" play-triangle="{{ true }}" hint-size="100%,60px">bura — plataforma de innovación colaborativa · Mérida, Venezuela · Bogotá, Colombia</x-import>
     </div>
     <div style="max-width: 1100px; margin: 0 auto; padding: 40px 24px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
-      <img src="assets/bura-logo.png" alt="BURA" style="height: 52px; display: block">
       <div style="display: flex; gap: 14px">
         <a href="https://www.instagram.com/genburaoficial" target="_blank" rel="noopener" style="text-decoration: none; display: inline-block; background: transparent; color: #E0C314; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 16px; border: 2px solid #E0C314" style-hover="background: #E0C314; color: #1A1602">Instagram</a>
         <a href="https://www.facebook.com/genburaoficial" target="_blank" rel="noopener" style="text-decoration: none; display: inline-block; background: transparent; color: #E0C314; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 16px; border: 2px solid #E0C314" style-hover="background: #E0C314; color: #1A1602">Facebook</a>
